@@ -102,7 +102,10 @@
             this.textBox3.Size = new System.Drawing.Size(152, 20);
             this.textBox3.TabIndex = 0;
             this.textBox3.TabStop = false;
-            this.textBox3.Tag = "";
+            this.textBox3.Tag = "0";
+            this.textBox3.Text = "0";
+            this.textBox3.Enter += new System.EventHandler(this.RemoveText);
+            this.textBox3.Leave += new System.EventHandler(this.AddText);
             // 
             // textBox2
             // 
@@ -112,7 +115,10 @@
             this.textBox2.Size = new System.Drawing.Size(152, 20);
             this.textBox2.TabIndex = 0;
             this.textBox2.TabStop = false;
-            this.textBox2.Tag = "";
+            this.textBox2.Tag = "0";
+            this.textBox2.Text = "0";
+            this.textBox2.Enter += new System.EventHandler(this.RemoveText);
+            this.textBox2.Leave += new System.EventHandler(this.AddText);
             // 
             // textBox1
             // 

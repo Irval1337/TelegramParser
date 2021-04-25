@@ -5,6 +5,7 @@ using System.Windows.Forms;
 using System.Diagnostics;
 using Newtonsoft.Json;
 using Telegram.Bot;
+using System.Collections.Generic;
 
 namespace TelegramParser
 {
@@ -49,7 +50,12 @@ namespace TelegramParser
         {
             if (String.IsNullOrEmpty(Properties.Settings.Default.KeyWords))
             {
-                Properties.Settings.Default.KeyWords = JsonConvert.SerializeObject(new KeyWords());
+                Properties.Settings.Default.KeyWords = JsonConvert.SerializeObject(new KeyWords()); 
+                Properties.Settings.Default.Save();
+            }
+            if (String.IsNullOrEmpty(Properties.Settings.Default.Groups))
+            {
+                Properties.Settings.Default.Groups = JsonConvert.SerializeObject(new List<string>());
                 Properties.Settings.Default.Save();
             }
             keyWords = JsonConvert.DeserializeObject<KeyWords>(Properties.Settings.Default.KeyWords);

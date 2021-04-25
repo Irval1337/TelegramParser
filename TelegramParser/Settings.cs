@@ -115,6 +115,7 @@ namespace TelegramParser
             try
             {
                 var client = new TelegramBotClient(textBox1.Text);
+                client.GetMeAsync();
                 if (textBox2.Text != "0" && Convert.ToInt64(textBox2.Text) != Properties.Settings.Default.AdminId)
                     client.SendTextMessageAsync(Convert.ToInt64(textBox2.Text), "Ваш аккаунт добавлен в список администраторов");
                 if (textBox3.Text != "0" && Convert.ToInt64(textBox3.Text) != Properties.Settings.Default.ChatId)
