@@ -12,3 +12,6 @@
 * /RemoveGroup - удаление группы из списка прослушиваемых
 
 #### Важно: для нормальной работы бота необходимо отключить [Privacy mode](https://core.telegram.org/bots#privacy-mode)
+
+### Скриншоты работы:
+![](https://image.prntscr.com/image/Z61nEWXGRSuCY-SL2xTc2A.png) ![](https://image.prntscr.com/image/WQsduzesTzeh4TqmbOf4OQ.png)
